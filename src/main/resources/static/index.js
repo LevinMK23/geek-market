@@ -1,4 +1,5 @@
-angular.module('market', []).controller('indexController', function ($scope, $http) {
+angular.module('market', [])
+    .controller('indexController', function ($scope, $http) {
     $scope.fillTable = function () {
         $http.get('http://localhost:8189/market/api/v1/products')
             .then(function (response) {
@@ -12,6 +13,10 @@ angular.module('market', []).controller('indexController', function ($scope, $ht
             .then(function (response) {
                 $scope.fillTable();
             });
+    }
+
+    $scope.addToCart = function (id) {
+        $http.post()
     }
 
     $scope.createNewProduct = function () {

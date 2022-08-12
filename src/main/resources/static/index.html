@@ -16,7 +16,7 @@
 
 <div class="container" ng-controller="indexController">
     <p></p>
-    <h1>March Market</h1>
+    <h1>Geek Market</h1>
     <p></p>
     <h3>Список товаров</h3>
     <p></p>
@@ -27,6 +27,7 @@
             <td>Название</td>
             <td>Цена</td>
             <td></td>
+            <td></td>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,9 @@
             <td>{{p.id}}</td>
             <td>{{p.title}}</td>
             <td>{{p.price}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="addToCart(p.id)">В корзину</button>
+            </td>
             <td>
                 <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
             </td>
