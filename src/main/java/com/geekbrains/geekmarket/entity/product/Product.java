@@ -3,6 +3,8 @@ package com.geekbrains.geekmarket.entity.product;
 import com.geekbrains.geekmarket.entity.category.Category;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
